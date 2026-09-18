@@ -3,18 +3,19 @@ services:
     build:
       context: ./app
     ports:
-      - "8000:8000"
+     - "8000:8000"
     models:
-     - llm
-
+      - llm
+  
   ui:
     build:
       context: ./ui
     ports:
-      - "8501:8501"
+     - "8501:8501"
     depends_on:
-      - fastapi
-
+     - fastapi
+  
+    
 models:
   llm:
     model: ai/smollm2
